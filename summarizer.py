@@ -4,7 +4,7 @@ from transformers import pipeline
 from bs4 import BeautifulSoup
 
 NEWS_API_KEY = "8ce74c5777ef4f67aa3be70208754244"
-summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
+summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
 
 def fetch_news():
     url = f"https://newsapi.org/v2/top-headlines?language=en&pageSize=10&apiKey={NEWS_API_KEY}"
